@@ -343,7 +343,7 @@ class Functions extends Config
     
      }
 
-     public function favoriteConcert($post_id,$user_id)
+     public function followConcert($post_id,$user_id)
      {
          $sql= "INSERT INTO favorite(user_id,post_id)VALUES('$user_id','$post_id') ";
 
@@ -388,6 +388,20 @@ class Functions extends Config
         } else {
             return "follow";
         }
+     }
+
+     public function unfollowConcert($post_id,$user_id)
+     {
+        $sql= "DELETE FROM favorite WHERE user_id = '$user_id' AND post_id = '$post_id'";
+
+        if($this->conn->query($sql))
+       {
+           header("Location:profile_user.php?success=1&message=The concert is successfully deleted from your favorite concerts.");
+       }
+       else
+       {
+           return FALSE;
+       }
      }
 }     
 

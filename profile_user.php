@@ -170,9 +170,9 @@
                             </h5>
                         <?php }else{ ?>
                         <h2  class="text-center ">Favorite Concerts</h2>
-                        <div class="row card-deck">
+                        <div class="row card-deck mt-3">
                             <?php foreach($post as $row){ ?>
-                            <div class="col-6 my-3">
+                            <div class="col-6 ">
                                 <div class="card ">
                                     <img src="images/<?php echo $row['file_name']?>" class="image cards-img-top">
                                     <div class="card-body">

@@ -182,7 +182,15 @@ elseif(isset($_POST['follow']))
     $post_id = $_POST['post_id'];
     $user_id = $_SESSION['id'];
 
-    $functions->favoriteConcert($post_id,$user_id);
+    $functions->followConcert($post_id,$user_id);
+}
+
+elseif(isset($_POST['unfollow']))
+{
+    $post_id = $_POST['post_id'];
+    $user_id = $_SESSION['id'];
+
+    $functions->unfollowConcert($post_id,$user_id);
 }
 
 ?>
