@@ -380,7 +380,7 @@ class Functions extends Config
 
      public function follow_or_unfollow($user_id,$post_id)
      {
-        $sql = "SELECT * FROM post WHERE user_id = '$user_id' AND post_id = '$post_id'";
+        $sql = "SELECT * FROM favorite WHERE user_id = '$user_id' AND post_id = '$post_id'";
         $result = $this->conn->query($sql);
 
         if ($result->num_rows == 1) {
