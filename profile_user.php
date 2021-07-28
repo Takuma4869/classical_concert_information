@@ -164,11 +164,12 @@
                     </div>
                     <div class="col-6 mx-auto my-3">
                         <?php if($post == false){ ?>
-                            <h2 class="text-center mb-3">
+                            <h2  class="text-center mb-3">Favorite Concerts</h2>
+                            <h5 class="text-center mb-3">
                             No records to display.
-                            </h2>
+                            </h5>
                         <?php }else{ ?>
-                        <h2  class="text-center mb-3">All Concerts</h2>
+                        <h2  class="text-center mb-3">Favorite Concerts</h2>
                         <div class="row card-deck">
                             <?php foreach($post as $row){ ?>
                             <div class="col-3 my-2">
