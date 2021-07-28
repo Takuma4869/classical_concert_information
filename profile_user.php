@@ -133,9 +133,9 @@
         <!-- Main navigation -->
         <!--Main Layout-->
         <main>
-            <div class="container-fluid">
+            <div class="container">
                 <div class="row">
-                    <div class="col-7 mx-auto my-3">
+                    <div class="col-8 mx-auto my-3">
                         <?php
                             if(isset($_GET["success"]) && isset($_GET["message"]))
                             {
