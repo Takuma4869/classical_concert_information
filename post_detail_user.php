@@ -157,7 +157,7 @@
                         <form action="datafile.php" method="post">
                             <input type="hidden" name="post_id" value="<?php echo $post_id ?>">
                             <button type="submit" name="favorite" class="btn btn-outline-white text-primary font-weight-bold float-right">
-                                <i class="fas fa-heart"></i> 
+                                <i class="far fa-heart"></i>
                             Favorite</button>
                         </form>
                     <h2><?php echo $post['concert_name']?></h2>

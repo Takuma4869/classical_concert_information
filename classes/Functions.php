@@ -349,12 +349,33 @@ class Functions extends Config
 
          if($this->conn->query($sql))
         {
-            
+            header("Location:profile_user.php?success=1&message=The concert is successfully added in your favorite concerts.");
         }
         else
         {
             return FALSE;
         }
+     }
+
+     public function get_favorite_post_user()
+     {
+        $sql = "SELECT post_id,concert_name, date, opening_time, hall, artists, program, file_name FROM post INNER JOIN favorite ON post.post_id = favorite.post_id  ORDER BY `post`.`date` ASC";
+        $result = $this->conn->query($sql);
+
+        if($result->num_rows >0)
+        {
+            $arr = array();
+            while($row = $result->fetch_assoc())
+            {
+                $arr[] = $row;
+            }
+            return $arr;
+        }
+        else
+        {
+            return FALSE;
+        }
+    
      }
 }     
 

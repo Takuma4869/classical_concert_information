@@ -1,5 +1,7 @@
 <?php
     include 'datafile.php';
+    $post = $functions->get_favorite_post_user();
+
 
     if(!isset($_SESSION["id"]))
     {
@@ -159,6 +161,39 @@
                         </div>
                         <a href="edit_profile.php" class="btn btn-dark">Edit Profile</a>
                         <a href="change_password.php" class="btn btn-dark float-right">Change Password</a>
+                    </div>
+                    <div class="col-6 mx-auto my-3">
+                        <?php if($post == false){ ?>
+                            <h2 class="text-center mb-3">
+                            No records to display.
+                            </h2>
+                        <?php }else{ ?>
+                        <h2  class="text-center mb-3">All Concerts</h2>
+                        <div class="row card-deck">
+                            <?php foreach($post as $row){ ?>
+                            <div class="col-3 my-2">
+                                <div class="card ">
+                                    <img src="images/<?php echo $row['file_name']?>" class="image cards-img-top">
+                                    <div class="card-body">
+                                        <h4 class="card-title">
+                                            <?php echo $row['concert_name'] ?>
+                                        </h4>
+                                        <div>
+                                            <?php echo $row['date'] ?> <span> | </span> <?php echo $row['opening_time']?>
+                                        </div>
+                                        <span class="card-text"><?php echo $row['hall']?></span><br>
+                                        <span class="card-text"><?php echo $row['artists']?></span><br>
+                                        <span class="card-text"><?php echo $row['program']?></span>
+                                    </div>
+                                    <div class="card-footer">
+                                        <a href="post_detail_user.php?id=<?php echo $row['post_id']?>" class="btn btn-sm btn-dark w-100">Detail</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <?php } ?>
+                        </div>
+                        <?php } ?>
                     </div>
                     
                 </div>
