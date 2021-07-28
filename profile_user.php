@@ -47,10 +47,6 @@
             background: transparent !important;
         }
 
-        /* .image
-        {
-            height: 330px;
-        } */
 
         @media (max-width: 991px) {
             .navbar:not(.top-nav-collapse) {
@@ -152,7 +148,7 @@
                             }
                             ?>
                     </div>
-                    <div class="col-6 mx-auto my-3">
+                    <div class="col-5 mx-auto my-3">
                         <h2 class="text-center ">Profile</h2>
                         <div class="card my-3">
                             <img src="images/<?php echo $_SESSION['file_name'] ?>"  class="image cards-img-top w-100">
@@ -167,7 +163,7 @@
                         <a href="edit_profile.php" class="btn btn-dark">Edit Profile</a>
                         <a href="change_password.php" class="btn btn-dark float-right">Change Password</a>
                     </div>
-                    <div class="col-6 mx-auto my-3">
+                    <div class="col-5 mx-auto my-3">
                         <?php if($post == false){ ?>
                             <h2  class="text-center mb-3">Favorite Concerts</h2>
                             <h5 class="text-center ">
@@ -177,9 +173,9 @@
                         <h2  class="text-center ">Favorite Concerts</h2>
                         <div class="row card-deck mt-3">
                             <?php foreach($post as $row){ ?>
-                            <div class="col-6 ">
+                            <div class="col-5 ">
                                 <div class="card mb-3">
-                                    <img src="images/<?php echo $row['file_name']?>" class="image cards-img-top " width="100%" height="500">
+                                    <img src="images/<?php echo $row['file_name']?>" class="image cards-img-top" width="100%" height="500">
                                     <div class="card-body">
                                         <h4 class="card-title">
                                             <?php echo $row['concert_name'] ?>

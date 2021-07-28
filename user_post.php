@@ -17,12 +17,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <style>
-        /* html,
-        body,
-        header,
-        .view {
-            height: 100%;
-        } */
+    
 
         @media (max-width: 740px) {
 
@@ -47,16 +42,7 @@
             background: transparent !important;
         }
         
-        /* .card 
-        {
-            width: 230px;
-            height: 520px;
-        } */
-
-        .image
-        {
-            height: 330px;
-        }
+    
 
         @media (max-width: 991px) {
             .navbar:not(.top-nav-collapse) {
@@ -200,7 +186,7 @@
                             <?php foreach($post as $row){ ?>
                             <div class="col-3 my-2">
                                 <div class="card ">
-                                    <img src="images/<?php echo $row['file_name']?>" class="image cards-img-top">
+                                    <img src="images/<?php echo $row['file_name']?>" class="image cards-img-top" width="100%" height="500">
                                     <div class="card-body">
                                         <h4 class="card-title">
                                             <?php echo $row['concert_name'] ?>
