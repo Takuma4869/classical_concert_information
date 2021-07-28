@@ -403,6 +403,27 @@ class Functions extends Config
            return FALSE;
        }
      }
+
+     public function get_upcoming_concert_user()
+     {
+        $sql = "SELECT post_id,concert_name, date, opening_time, hall, artists, program, file_name FROM post ORDER BY `post`.`date` ASC limit 4";
+        $result = $this->conn->query($sql);
+
+        if($result->num_rows >0)
+        {
+            $arr = array();
+            while($row = $result->fetch_assoc())
+            {
+                $arr[] = $row;
+            }
+            return $arr;
+        }
+        else
+        {
+            return FALSE;
+        }
+    
+     }
 }     
 
 ?>
