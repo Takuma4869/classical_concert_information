@@ -154,12 +154,24 @@
                             
                     </div>
                     <div class="col-5  text-center h4 my-auto">
+                        <?php 
+                        $rs = $functions->follow_or_unfollow($_SESSION['id'],$post_id);
+                        if($rs == 'follow'){ ?>
                         <form action="datafile.php" method="post">
                             <input type="hidden" name="post_id" value="<?php echo $post_id ?>">
-                            <button type="submit" name="favorite" class="btn btn-outline-white text-primary font-weight-bold float-right">
+                            <button type="submit" name="follow" class="btn btn-outline-white text-primary font-weight-bold float-right">
                                 <i class="far fa-heart"></i>
                             Favorite</button>
                         </form>
+                        <?php }else{ ?>
+                        <form action="datafile.php" method="post">
+                            <input type="hidden" name="post_id" value="<?php echo $post_id ?>">
+                            <button type="submit" name="unfollow" class="btn btn-outline-white text-primary font-weight-bold float-right">
+                                <i class="fas fa-heart"></i>
+                            Favorite</button>
+                        </form>
+                        <?php } ?>
+                        
                     <h2><?php echo $post['concert_name']?></h2>
                         <table class="table table-bordered mt-3">
                             <tr>

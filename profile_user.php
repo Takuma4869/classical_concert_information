@@ -172,7 +172,7 @@
                         <h2  class="text-center mb-3">Favorite Concerts</h2>
                         <div class="row card-deck">
                             <?php foreach($post as $row){ ?>
-                            <div class="col-3 my-2">
+                            <div class="col-6 my-2">
                                 <div class="card ">
                                     <img src="images/<?php echo $row['file_name']?>" class="image cards-img-top">
                                     <div class="card-body">

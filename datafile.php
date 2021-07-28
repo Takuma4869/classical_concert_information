@@ -177,7 +177,7 @@ elseif(isset($_POST['search3']))
     header('location:searchedResult3.php');
 }
 
-elseif(isset($_POST['favorite']))
+elseif(isset($_POST['follow']))
 {
     $post_id = $_POST['post_id'];
     $user_id = $_SESSION['id'];
