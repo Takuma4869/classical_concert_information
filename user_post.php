@@ -186,7 +186,7 @@
                             <?php foreach($post as $row){ ?>
                             <div class="col-3 my-2">
                                 <div class="card ">
-                                    <img src="images/<?php echo $row['file_name']?>" class="image cards-img-top" width="100%" height="500">
+                                    <img src="images/<?php echo $row['file_name']?>" class="image cards-img-top" width="100%" height="300">
                                     <div class="card-body">
                                         <h4 class="card-title">
                                             <?php echo $row['concert_name'] ?>
