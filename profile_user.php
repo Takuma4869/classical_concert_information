@@ -163,7 +163,7 @@
                         <a href="edit_profile.php" class="btn btn-dark">Edit Profile</a>
                         <a href="change_password.php" class="btn btn-dark float-right">Change Password</a>
                     </div>
-                    <div class="col-5 mx-auto my-3">
+                    <div class="col-7 mx-auto my-3">
                         <?php if($post == false){ ?>
                             <h2  class="text-center mb-3">Favorite Concerts</h2>
                             <h5 class="text-center ">
@@ -173,7 +173,7 @@
                         <h2  class="text-center ">Favorite Concerts</h2>
                         <div class="row card-deck mt-3">
                             <?php foreach($post as $row){ ?>
-                            <div class="col-7 ">
+                            <div class="col-6 ">
                                 <div class="card mb-3">
                                     <img src="images/<?php echo $row['file_name']?>" class="image cards-img-top" width="100%" height="300">
                                     <div class="card-body">
