@@ -359,7 +359,7 @@ class Functions extends Config
 
      public function get_favorite_post_user()
      {
-        $sql = "SELECT post_id,concert_name, date, opening_time, hall, artists, program, file_name FROM post INNER JOIN favorite ON post.post_id = favorite.post_id  ORDER BY `post`.`date` ASC";
+        $sql = "SELECT * FROM post INNER JOIN favorite ON post.post_id = favorite.post_id  ORDER BY `post`.`date` ASC";
         $result = $this->conn->query($sql);
 
         if($result->num_rows >0)
