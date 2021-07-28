@@ -159,15 +159,15 @@
                         if($rs == 'follow'){ ?>
                         <form action="datafile.php" method="post">
                             <input type="hidden" name="post_id" value="<?php echo $post_id ?>">
-                            <button type="submit" name="follow" class="btn btn-outline-white text-primary font-weight-bold float-right">
-                                <i class="far fa-heart"></i>
+                            <button type="submit" name="unfollow" class="btn btn-outline-white text-primary font-weight-bold float-right">
+                                <i class="fas fa-heart"></i>
                             Favorite</button>
                         </form>
                         <?php }else{ ?>
                         <form action="datafile.php" method="post">
                             <input type="hidden" name="post_id" value="<?php echo $post_id ?>">
-                            <button type="submit" name="unfollow" class="btn btn-outline-white text-primary font-weight-bold float-right">
-                                <i class="fas fa-heart"></i>
+                            <button type="submit" name="follow" class="btn btn-outline-white text-primary font-weight-bold float-right">
+                                <i class="far fa-heart"></i>
                             Favorite</button>
                         </form>
                         <?php } ?>
