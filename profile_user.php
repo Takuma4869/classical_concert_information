@@ -173,9 +173,9 @@
                         <h2  class="text-center ">Favorite Concerts</h2>
                         <div class="row card-deck mt-3">
                             <?php foreach($post as $row){ ?>
-                            <div class="col-5 ">
+                            <div class="col-7 ">
                                 <div class="card mb-3">
-                                    <img src="images/<?php echo $row['file_name']?>" class="image cards-img-top" width="100%" height="500">
+                                    <img src="images/<?php echo $row['file_name']?>" class="image cards-img-top" width="100%" height="300">
                                     <div class="card-body">
                                         <h4 class="card-title">
                                             <?php echo $row['concert_name'] ?>
