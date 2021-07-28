@@ -47,6 +47,11 @@
             background: transparent !important;
         }
 
+        .image
+        {
+            height: 330px;
+        }
+
         @media (max-width: 991px) {
             .navbar:not(.top-nav-collapse) {
                 background: #78909c !important;
@@ -170,10 +175,10 @@
                             </h5>
                         <?php }else{ ?>
                         <h2  class="text-center ">Favorite Concerts</h2>
-                        <div class="row card-deck mt-3">
+                        <div class="row card-deck ">
                             <?php foreach($post as $row){ ?>
                             <div class="col-6 ">
-                                <div class="card ">
+                                <div class="card my-3">
                                     <img src="images/<?php echo $row['file_name']?>" class="image cards-img-top">
                                     <div class="card-body">
                                         <h4 class="card-title">
