@@ -142,11 +142,12 @@
                         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
                     </ol>
                     <div class="carousel-inner">
                     <?php foreach($post as $row){ ?>
                         <div class="carousel-item active">
-                        <img src="images/<?php echo $row['file_name']?>"  width="100%">
+                        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="images/<?php echo $row['file_name']?>" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: First slide"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#555" dy=".3em"><?php echo $row['concert_name'] ?></text></svg>
                             <div class="carousel-caption d-none d-md-block">
                                 <h5><?php echo $row['date'] ?> <span> | </span> <?php echo $row['opening_time']?></h5>
                                 <p><?php echo $row['hall']?></p>
