@@ -3,7 +3,7 @@
 
     if(!isset($_SESSION["id"]))
     {
-        header("location:login.php");
+        header("location:index.php");
     }
 ?>
 <!doctype html>

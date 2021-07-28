@@ -5,7 +5,7 @@
 
     if(!isset($_SESSION["id"]))
     {
-        header("location:login.php");
+        header("location:index.php");
     }
 ?>
 <!doctype html>
@@ -134,7 +134,7 @@
         <main>
             <div class="container">
                 <div class="row">
-                    <div class="col-7 mx-auto">
+                    <div class="col-7 mx-auto my-3">
                         <?php
                             if(isset($_GET["success"]) && isset($_GET["message"]))
                             {
@@ -165,14 +165,14 @@
                     <div class="col-6 mx-auto my-3">
                         <?php if($post == false){ ?>
                             <h2  class="text-center mb-3">Favorite Concerts</h2>
-                            <h5 class="text-center mb-3">
+                            <h5 class="text-center ">
                             No records to display.
                             </h5>
                         <?php }else{ ?>
-                        <h2  class="text-center mb-3">Favorite Concerts</h2>
+                        <h2  class="text-center ">Favorite Concerts</h2>
                         <div class="row card-deck">
                             <?php foreach($post as $row){ ?>
-                            <div class="col-6 my-2">
+                            <div class="col-6 my-3">
                                 <div class="card ">
                                     <img src="images/<?php echo $row['file_name']?>" class="image cards-img-top">
                                     <div class="card-body">
