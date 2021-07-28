@@ -47,10 +47,10 @@
             background: transparent !important;
         }
 
-        .image
+        /* .image
         {
             height: 330px;
-        }
+        } */
 
         @media (max-width: 991px) {
             .navbar:not(.top-nav-collapse) {
@@ -137,7 +137,7 @@
         <!-- Main navigation -->
         <!--Main Layout-->
         <main>
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row">
                     <div class="col-7 mx-auto my-3">
                         <?php
@@ -175,11 +175,11 @@
                             </h5>
                         <?php }else{ ?>
                         <h2  class="text-center ">Favorite Concerts</h2>
-                        <div class="row card-deck ">
+                        <div class="row card-deck mt-3">
                             <?php foreach($post as $row){ ?>
                             <div class="col-6 ">
-                                <div class="card my-3">
-                                    <img src="images/<?php echo $row['file_name']?>" class="image cards-img-top">
+                                <div class="card mb-3">
+                                    <img src="images/<?php echo $row['file_name']?>" class="image cards-img-top " width="100%" height="500">
                                     <div class="card-body">
                                         <h4 class="card-title">
                                             <?php echo $row['concert_name'] ?>
