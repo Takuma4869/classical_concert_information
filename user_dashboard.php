@@ -98,7 +98,7 @@
                             $count = $functions->get_favorite_concerts_count($_SESSION['id']);
                             if($count == '0'){ ?>
                                 <li class="nav-item">
-                                    <a href="profile_user.php" class="text-white">
+                                    <a href="profile_user.php" class="nav-link text-white">
                                         <i class="far fa-heart"></i> 
                                         <span>0</span>
                                     </a>
@@ -107,7 +107,7 @@
                             </form>
                             <?php }else{ ?>
                                 <li class="nav-item">
-                                    <a href="profile_user.php" class="text-white">
+                                    <a href="profile_user.php" class="nav-link text-white">
                                     <i class="fas fa-heart"></i> 
                                     <span><?php echo $count($_SESSION["id"]);?></span>
                                     </a>
