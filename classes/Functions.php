@@ -424,6 +424,22 @@ class Functions extends Config
         }
     
      }
+
+     public function get_favorite_concerts_count($user_id)
+     {
+        $sql = "SELECT COUNT(*) as count FROM favorite WHERE user_id=".$user_id;
+        $result = $this->conn->query($sql);
+
+        if($result)
+        {
+            $count = $result->fetch_assoc();
+            return $count["count"];
+        }
+        else
+        {
+            return 0;
+        }
+     }
 }     
 
 ?>
