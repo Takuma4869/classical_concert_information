@@ -174,9 +174,6 @@
                     </div>
                     
 
-                    <div class="col-12 text-center mt-5">
-                        <p>This website is for someone who is looking for classical concert. You can check a lot of classical concerts and get a lot of informations.</p>
-                    </div>
                     
                     <!--Grid column-->
                 </div>
