@@ -136,14 +136,17 @@
             <div class="container">
                 <!--Grid row-->
                 <div class="row py-5">
-                    <div class="col-10 bg-light">
+                    <div class="col-12 bg-light">
                     <?php if($post == false){ ?>
                             <h2 class="text-center mb-3">
                             No records to display.
                             </h2>
                         <?php }else{ ?>
-                        <h2  class="text-center mb-3">Upcoming Concerts</h2>
-                        <a href="user_post.php" class="btn btn-outline-dark float-right">Learn more</a>
+                        <div>
+                            <h2  class="text-center mb-3">Upcoming Concerts</h2>
+                            <a href="user_post.php" class="btn btn-outline-dark float-right">Learn more</a>
+                        </div>
+                        
                         <div class="row card-deck">
                             <?php foreach($post as $row){ ?>
                             <div class="col-3 my-2">
