@@ -136,14 +136,14 @@
                         <h2 class="text-center">Serch Concerts</h2>
                             <form action="datafile.php" method="post">
                             <div class="row h5">
-                                <div class="col-6 text-center">
+                                <div class="col-5 text-center mx-auto">
                                     <label for="keywords" class="form-label h4">Keywords</label>
                                     <input type="text" class="form-control" name="searched_concert" id="keywords" aria-label="Recipient's username" aria-describedby="button-addon2" placeholder="Search Composers, Conductors and Halls">
                                     <div class="div text-center col-5 mx-auto mt-3">
                                         <button class="btn btn-outline-dark w-100" type="submit" name="search1" id="button-addon2">Search</button>
                                     </div>
                                 </div>
-                                <div class="col-6 text-center">
+                                <div class="col-5 text-center mx-auto">
                                 <label for="date" class="form-label h4">Date</label>
                                     <div class="input-group input-daterange"> 
                                         <label class=" form-control-placeholder mr-3" id="start-p" for="start">Start Date</label>
