@@ -1,7 +1,7 @@
 <?php
     include 'datafile.php';
     $post = $functions->get_upcoming_concert_user();
-    $count = $functions->get_favorite_concerts_count($_SESSION['id']);
+    // $count = $functions->get_favorite_concerts_count($_SESSION['id']);
 
     if(!isset($_SESSION["id"]))
     {
