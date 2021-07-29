@@ -149,7 +149,7 @@
                 <!--Grid row-->
                 <div class="row py-3">
                     <!--Grid column-->
-                    <div class="col-6 ">
+                    <div class="col-6 my-auto">
                         <img src="images/<?php  echo $post['file_name']?>" class="d-block img-fluid w-50  mx-auto">
                             
                     </div>

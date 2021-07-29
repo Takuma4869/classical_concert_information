@@ -150,11 +150,11 @@
                 <!--Grid row-->
                 <div class="row py-3">
                     <!--Grid column-->
-                    <div class="col-6 my-5">
+                    <div class="col-6 my-auto">
                         <img src="images/<?php  echo $post['file_name']?>" class="d-block img-fluid w-50  mx-auto">
                             
                     </div>
-                    <div class="col-5 text-center h4">
+                    <div class="col-5 text-center h4 my-auto">
                     <h2><?php echo $post['concert_name']?></h2>
                         <table class="table table-bordered ">
                             <tr>
