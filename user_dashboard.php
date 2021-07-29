@@ -142,14 +142,14 @@
                             No records to display.
                             </h2>
                         <?php }else{ ?>
-                        <div class="text-center my-2">
+                        <div class="text-center my-3">
                             <span class="h2 mb-3">Upcoming Concerts</span>
                             <a href="user_post.php" class="btn btn-outline-dark float-right">Learn more</a>
                         </div>
                         
                         <div class="row card-deck">
                             <?php foreach($post as $row){ ?>
-                            <div class="col-4 my-2">
+                            <div class="col-4 mb-4">
                                 <div class="card ">
                                     <img src="images/<?php echo $row['file_name']?>" class="image cards-img-top" width="100%" height="300">
                                     <div class="card-body">
