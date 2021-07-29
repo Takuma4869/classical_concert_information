@@ -143,13 +143,13 @@
                             </h2>
                         <?php }else{ ?>
                         <div>
-                            <h2  class="text-center mb-3">Upcoming Concerts</h2>
+                            <p class="h2 text-center mb-3">Upcoming Concerts</p>
                             <a href="user_post.php" class="btn btn-outline-dark float-right">Learn more</a>
                         </div>
                         
                         <div class="row card-deck">
                             <?php foreach($post as $row){ ?>
-                            <div class="col-3 my-2">
+                            <div class="col-4 my-2">
                                 <div class="card ">
                                     <img src="images/<?php echo $row['file_name']?>" class="image cards-img-top" width="100%" height="300">
                                     <div class="card-body">
@@ -159,9 +159,7 @@
                                         <div>
                                             <?php echo $row['date'] ?> <span> | </span> <?php echo $row['opening_time']?>
                                         </div>
-                                        <span class="card-text"><?php echo $row['hall']?></span><br>
-                                        <span class="card-text"><?php echo $row['artists']?></span><br>
-                                        <span class="card-text"><?php echo $row['program']?></span>
+                                        <span class="card-text"><?php echo $row['hall']?></span>
                                     </div>
                                     <div class="card-footer">
                                         <a href="post_detail_user.php?id=<?php echo $row['post_id']?>" class="btn btn-sm btn-dark w-100">Detail</a>
