@@ -136,66 +136,41 @@
             <div class="container">
                 <!--Grid row-->
                 <div class="row py-5">
-                    <!--Carousel Wrapper-->
-                    <div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
-                        <!--Indicators-->
-                        <ol class="carousel-indicators">
-                            <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
-                            <li data-target="#carousel-example-2" data-slide-to="1"></li>
-                            <li data-target="#carousel-example-2" data-slide-to="2"></li>
-                        </ol>
-                        <!--/.Indicators-->
-                        <!--Slides-->
-                        <div class="carousel-inner" role="listbox">
-                            <div class="carousel-item active">
-                            <div class="view">
-                                <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg"
-                                alt="First slide">
-                                <div class="mask rgba-black-light"></div>
+                    <div class="col-10 bg-light">
+                    <?php if($post == false){ ?>
+                            <h2 class="text-center mb-3">
+                            No records to display.
+                            </h2>
+                        <?php }else{ ?>
+                        <h2  class="text-center mb-3">Upcoming Concerts</h2>
+                        <a href="user_post.php" class="btn btn-outline-dark float-right">Learn more</a>
+                        <div class="row card-deck">
+                            <?php foreach($post as $row){ ?>
+                            <div class="col-3 my-2">
+                                <div class="card ">
+                                    <img src="images/<?php echo $row['file_name']?>" class="image cards-img-top" width="100%" height="300">
+                                    <div class="card-body">
+                                        <h4 class="card-title">
+                                            <?php echo $row['concert_name'] ?>
+                                        </h4>
+                                        <div>
+                                            <?php echo $row['date'] ?> <span> | </span> <?php echo $row['opening_time']?>
+                                        </div>
+                                        <span class="card-text"><?php echo $row['hall']?></span><br>
+                                        <span class="card-text"><?php echo $row['artists']?></span><br>
+                                        <span class="card-text"><?php echo $row['program']?></span>
+                                    </div>
+                                    <div class="card-footer">
+                                        <a href="post_detail_user.php?id=<?php echo $row['post_id']?>" class="btn btn-sm btn-dark w-100">Detail</a>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="carousel-caption">
-                                <h3 class="h3-responsive">Light mask</h3>
-                                <p>First text</p>
-                            </div>
-                            </div>
-                            <div class="carousel-item">
-                            <!--Mask color-->
-                            <div class="view">
-                                <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(6).jpg"
-                                alt="Second slide">
-                                <div class="mask rgba-black-strong"></div>
-                            </div>
-                            <div class="carousel-caption">
-                                <h3 class="h3-responsive">Strong mask</h3>
-                                <p>Secondary text</p>
-                            </div>
-                            </div>
-                            <div class="carousel-item">
-                            <!--Mask color-->
-                            <div class="view">
-                                <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(9).jpg"
-                                alt="Third slide">
-                                <div class="mask rgba-black-slight"></div>
-                            </div>
-                            <div class="carousel-caption">
-                                <h3 class="h3-responsive">Slight mask</h3>
-                                <p>Third text</p>
-                            </div>
-                            </div>
+                            
+                            <?php } ?>
                         </div>
-                        <!--/.Slides-->
-                        <!--Controls-->
-                        <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
-                        <!--/.Controls-->
+                        <?php } ?>
+                        
                     </div>
-                    <!--/.Carousel Wrapper-->
                     
 
                     <div class="col-12 text-center">
