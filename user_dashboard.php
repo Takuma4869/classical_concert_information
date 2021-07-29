@@ -143,7 +143,7 @@
                             </h2>
                         <?php }else{ ?>
                         <div>
-                            <p class="h2 text-center mb-3">Upcoming Concerts</p>
+                            <span class="h2 text-center mb-3">Upcoming Concerts</span>
                             <a href="user_post.php" class="btn btn-outline-dark float-right">Learn more</a>
                         </div>
                         
