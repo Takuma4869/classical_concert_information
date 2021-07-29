@@ -142,8 +142,8 @@
                             No records to display.
                             </h2>
                         <?php }else{ ?>
-                        <div>
-                            <span class="h2 text-center mb-3">Upcoming Concerts</span>
+                        <div class="text-center my-2">
+                            <span class="h2 mb-3">Upcoming Concerts</span>
                             <a href="user_post.php" class="btn btn-outline-dark float-right">Learn more</a>
                         </div>
                         
