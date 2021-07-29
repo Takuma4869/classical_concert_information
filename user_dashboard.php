@@ -103,8 +103,6 @@
                                         <span>0</span>
                                     </a>
                                 </li>
-                                
-                            </form>
                             <?php }else{ ?>
                                 <li class="nav-item">
                                     <a href="profile_user.php" class="nav-link text-white">
@@ -112,8 +110,6 @@
                                     <span><?php echo $count($_SESSION["id"]);?></span>
                                     </a>
                                 </li>
-                                    
-                            </form>
                             <?php } ?>
                             <li class="nav-item">
                             <a href="profile_user.php" class="nav-link">Welcome, <?php echo $_SESSION['fname']." ".$_SESSION['lname']; ?> !</a>
