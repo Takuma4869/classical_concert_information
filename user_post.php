@@ -136,14 +136,14 @@
                         <h2 class="text-center">Serch Concerts</h2>
                             <form action="datafile.php" method="post">
                             <div class="row h5">
-                                <div class="col-4 text-center">
+                                <div class="col-6 text-center">
                                     <label for="keywords" class="form-label h4">Keywords</label>
-                                    <input type="text" class="form-control" name="searched_concert" id="keywords" aria-label="Recipient's username" aria-describedby="button-addon2">
+                                    <input type="text" class="form-control" name="searched_concert" id="keywords" aria-label="Recipient's username" aria-describedby="button-addon2" placeholder="Search Composers, Conductors and Halls">
                                     <div class="div text-center col-5 mx-auto mt-3">
                                         <button class="btn btn-outline-dark w-100" type="submit" name="search1" id="button-addon2">Search</button>
                                     </div>
                                 </div>
-                                <div class="col-4 text-center">
+                                <div class="col-6 text-center">
                                 <label for="date" class="form-label h4">Date</label>
                                     <div class="input-group input-daterange"> 
                                         <label class=" form-control-placeholder mr-3" id="start-p" for="start">Start Date</label>
@@ -157,18 +157,18 @@
                                         <button class="btn btn-outline-dark w-100" type="submit" name="search2" id="button-addon2">Search</button>
                                     </div>
                                 </div>
-                                <div class="col-4 text-center ">
+                                <!-- <div class="col-4 text-center ">
                                     <label for="hall" class="form-label h4">hall</label>
-                                    <select name="hall" id="hall" class="form-control">
+                                    <select name="hall" id="hall" class="form-control"> -->
                                         <!-- <option disabled selected>choose hall</option> -->
-                                        <?php foreach($hall as $row){ ?>
+                                        <!-- <?php foreach($hall as $row){ ?>
                                             <option value="<?php echo $row['hall'] ?>"><?php echo $row['hall']?></option>
                                         <?php } ?>
                                     </select>
                                     <div class="div text-center col-5 mx-auto mt-3">
                                         <button class="btn btn-outline-dark w-100" type="submit" name="search3" id="button-addon2">Search</button>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                             
                             </form>
