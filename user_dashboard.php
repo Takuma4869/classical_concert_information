@@ -95,23 +95,21 @@
                             </li>
                         </ul>
                         <ul class="navbar-nav ms-auto">
-                            <?php 
-                            $count = $functions->get_favorite_concerts_count($_SESSION['id']);
-                            if($count == '0'){ ?>
-                                <li class="nav-item">
-                                    <a href="profile_user.php" class="nav-link text-white">
-                                        <i class="far fa-heart"></i> 
-                                        <span>0</span>
-                                    </a>
-                                </li>
-                            <?php }else{ ?>
-                                <li class="nav-item">
-                                    <a href="profile_user.php" class="nav-link text-white">
-                                    <i class="fas fa-heart"></i> 
-                                    <span><?php echo $count($_SESSION["id"]);?></span>
-                                    </a>
-                                </li>
-                            <?php } ?>
+                            <li class="nav-item">
+                                <?php 
+                                $count = $functions->get_favorite_concerts_count($_SESSION['id']);
+                                if($count == '0'){ ?>
+                                        <a href="profile_user.php" class="nav-link text-white">
+                                            <i class="far fa-heart"></i> 
+                                            <span>0</span>
+                                        </a>
+                                <?php }else{ ?>
+                                        <a href="profile_user.php" class="nav-link text-white">
+                                        <i class="fas fa-heart"></i> 
+                                        <span><?php echo $count($_SESSION["id"]);?></span>
+                                        </a>
+                                <?php } ?>
+                            </li>
                             <li class="nav-item">
                             <a href="profile_user.php" class="nav-link">Welcome, <?php echo $_SESSION['fname']." ".$_SESSION['lname']; ?> !</a>
                             </li>
