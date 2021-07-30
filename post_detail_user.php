@@ -2,6 +2,8 @@
     include 'datafile.php';
     $post_id = $_GET["id"];
     $post = $functions->get_post_details($post_id);
+    $count = $functions->get_favorite_concerts_count($_SESSION['id']);
+
 
     if(!isset($_SESSION["id"]))
     {
@@ -105,6 +107,16 @@
                             </li>
                         </ul>
                         <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="profile_user.php">
+                                    <?php if($count == false){ ?>
+                                        <i class="far fa-heart"></i> 0
+                                    <?php }else{ ?>
+                                        <i class="fas fa-heart"></i> 
+                                        <?php echo $count;?>
+                                    <?php } ?>
+                                </a>
+                            </li>
                             <li class="nav-item">
                             <a href="profile_user.php" class="nav-link">Welcome, <?php echo $_SESSION["fname"]." ".$_SESSION["lname"]; ?> !</a>
                             </li>

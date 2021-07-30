@@ -2,6 +2,8 @@
     include 'datafile.php';
     $keywords = $_SESSION['searched_concert'];
     $search = $functions->search($keywords);
+    $count = $functions->get_favorite_concerts_count($_SESSION['id']);
+
 
     // echo "<pre>";
     // print_r($search);
@@ -106,6 +108,16 @@
                             </li>
                         </ul>
                         <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="profile_user.php">
+                                    <?php if($count == false){ ?>
+                                        <i class="far fa-heart"></i> 0
+                                    <?php }else{ ?>
+                                        <i class="fas fa-heart"></i> 
+                                        <?php echo $count;?>
+                                    <?php } ?>
+                                </a>
+                            </li>
                             <li class="nav-item">
                             <a href="profile_user.php" class="nav-link">Welcome, <?php echo $_SESSION["fname"]." ".$_SESSION["lname"]; ?> !</a>
                             </li>
