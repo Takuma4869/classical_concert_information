@@ -437,7 +437,7 @@ class Functions extends Config
         }
         else
         {
-            return 0;
+            return false;
         }
      }
 }     
